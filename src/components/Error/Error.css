@@ -1,0 +1,69 @@
+.error-msg {
+    color: #cd0000;
+    font-weight: 700;
+    margin-top: -2.2rem;
+    margin-left: 3rem;
+  }
+  
+  .error-msg-black {
+    color: #000;
+    font-weight: 700;
+    margin-top: -2.2rem;
+    margin-left: 3rem;
+  }
+  
+  .error-symbol {
+    padding: 10px;
+  }
+  
+  .error-symbol-sm {
+    padding: 10px;
+    padding-top: 0px;
+  }
+  
+  .error-header {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    padding-top: 12px;
+  }
+  
+  .error-container {
+    padding: 1rem 0 1rem 1rem;
+    margin-bottom: 2rem;
+    background-color: #fff0f1;
+    border-left: 5px solid #cd0000;
+  }
+  
+  .error-list {
+    color: #cd0000;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: underline;
+  }
+  
+  .error-content {
+    border-left: 5px solid #cd0000;
+    padding-left: 1rem;
+    margin-bottom: 3rem;
+  }
+  
+  @media screen and (min-width: 1000px) {
+    .error-msg {
+      margin-top: 0;
+      margin-left: 0;
+    }
+  
+    .check-entries {
+      margin-left: 0.5rem;
+    }
+  
+    .error-msg-black {
+      margin-top: 0;
+  
+      margin-left: 0;
+      margin-bottom: 0;
+    }
+  }
+  

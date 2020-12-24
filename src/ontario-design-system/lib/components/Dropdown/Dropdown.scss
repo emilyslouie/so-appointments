@@ -1,0 +1,27 @@
+@import "../../../styles/components/text-inputs/text-inputs.scss";
+// @import "../TextInput/TextInput.scss";
+
+.ontario-form-group {
+
+  // @include ontario-input;
+
+  .ontario-dropdown {
+    background-position: right 0.5rem center;
+    padding-right: calc(1rem * 2.25);
+    background-origin: initial;
+    height: auto;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: white url("data:image/svg+xml;utf8,<svg width='48' height='48' xmlns='http://www.w3.org/2000/svg'><g><path d='M15.93 20a.8.8 0 0 0-.566 1.366l8.07 8.07a.8.8 0 0 0 1.131 0l8.07-8.07A.8.8 0 0 0 32.069 20H15.93z' fill='black'/></g></svg>") no-repeat;
+    background-position: right 5px top 50%;
+    background-size: 2.2rem;
+  }
+
+  .ontario-dropdown::-ms-expand {
+    display: none;
+  }
+
+  .ontario-dropdown option {
+    font-weight: normal;
+  }
+}

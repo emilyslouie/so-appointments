@@ -1,0 +1,77 @@
+/*
+ * Note: The goal of this header is to reflect the current ontario.ca header as closely as possible. For this reason, much of the CSS is copied from the original style sheets.
+ * This header does not contain the search box.
+ */
+
+
+header .large-show {
+  display: none;
+  /* @media #{$large-up} {
+      display: inherit;
+    } */
+}
+
+header a.logo-link {
+  display: block;
+}
+
+/* header .large-hide {
+    @media #{$large-up} {
+      display: none;
+    }
+  } */
+
+.so {
+  background-color: #03713D !important;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+
+}
+
+header .ontario-row {
+  display: flex;
+  align-items: center;
+}
+
+header img.site-sologo {
+  display: block;
+  width: 112px;
+
+  /* @media #{$large-up} {
+      & {
+        width: 153px;
+      }
+    } */
+}
+
+
+
+header .site-logo-print {
+  display: none;
+  height: 45px;
+}
+
+.abs {
+  width: 100%;
+  font-family: "Open Sans";
+  display: flex;
+  justify-content: space-between;
+}
+
+.sublogo {
+  color: white;
+  text-align: right;
+  transform: translateY(4px);
+  font-size: 14px;
+}
+
+@media only screen and (min-width: 1170px) {
+  header img.site-sologo {
+    width: 153px;
+  }
+
+  .sublogo {
+    transform: translateY(8px);
+    font-size: 18px;
+  }
+}

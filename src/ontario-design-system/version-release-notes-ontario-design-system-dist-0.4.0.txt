@@ -1,0 +1,101 @@
+---
+title: Design system release notes
+label: Release notes
+---
+* [Elements](#elements)
+* [Platform](#platform)
+
+<br>
+
+## <a name="elements"></a> Elements 0.3
+
+<p class="ontario-lead-statement">April 27, 2020 </p>
+
+* This is the third Alpha release of the Ontario Design System
+* In this release, we’ve included:
+  * icons
+  * links
+* We’ve also included a survey to gather your [feedback about the design system]({{path './give-feedback.html'}}).
+
+### Known bugs and issues
+* The order of the icons in the preview box does not match the order in the “Notes” table
+
+<br>
+<br>
+
+## Elements 0.2
+<p class="ontario-lead-statement">February 6, 2020 </p>
+
+* This is the second Alpha release of the Ontario Design System
+* In this release, we’ve included:
+  * a new radio button design
+  * checkboxes
+  * grid
+  * spacing
+* We’ve also updated the content and layout of some pages, based on your feedback
+
+<br>
+<br>
+
+## Elements 0.1
+<p class="ontario-lead-statement">December 3, 2019</p>
+
+### What’s included in this release
+* This is the first Alpha release of the Ontario Design System
+* In this release, we’ve included:
+  * design principles
+  * colours
+  * fonts and typography
+  * buttons
+  * dropdown lists
+  * hint text
+  * labels
+  * radio buttons
+  * text inputs
+  * textareas
+* Elements have been tested on <abbr title="Internet Explorer 11">IE11</abbr>, Microsoft Edge, Firefox, Chrome, Safari on PC, Mac, iPhone and Android
+* This release includes the HTML, CSS and SCSS
+
+### Known bugs and issues
+* We are testing these components for accessibility issues. There may be more issues we identify through the testing
+
+<hr>
+
+## <a name="platform"></a> Platform 0.3
+<p class="ontario-lead-statement">April 27, 2020</p>
+
+### What’s new
+* We released our design system theme for developers
+    * Distribution package: [Design System 0.3.0]({{path '../../dist/ontario-design-system-dist-0.3.0.zip'}})
+* We improved the display of variations in the component preview window
+
+### Known bugs and issues
+* We’re still having issues with the design system on mobile that we’re working to resolve
+
+<br>
+<br>
+
+## Platform 0.2
+<p class="ontario-lead-statement">February 6, 2020</p>
+
+### What’s new
+* We’ve designed a new landing page which is way more fun than what we use to have
+* We’ve also improved the accessibility of the site with better tab order, alt text on buttons and better performance in <abbr title="Internet Explorer 11">IE11</abbr>
+
+### Known bugs and issues
+* We’re still having issues with the design system on mobile that we’re working to resolve
+
+<br>
+<br>
+
+## Platform 0.1
+<p class="ontario-lead-statement">December 3, 2019</p>
+
+### What’s new
+* We’ve released the first version of our design system platform using [Fractal](http://fractal.build), an open source solution
+* Fractal works well on desktop with Chrome, Safari and Firefox
+
+### Known bugs and issues
+* We’re still having issues with the design system  in <abbr title="Internet Explorer 11">IE11</abbr>
+* We know there are issues with accessibility and navigation, particularly on mobile
+* We are currently using images in the guidance where they help to illustrate the guidance, and many of the images include text. In future releases, we want to move away from images and use code snippets to improve accessibility

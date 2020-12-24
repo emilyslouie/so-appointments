@@ -1,0 +1,21 @@
+@import "../../../styles/sass/variables-import.scss";
+
+.ontario-back-to-top {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  position: fixed;
+  right: $spacing-7;
+  bottom: $spacing-7;
+
+  .ontario-icon {
+    margin-bottom: $spacing-0;
+    width: 37px;
+    height: 38px;
+  }
+
+  & > span {
+    // Prevent shift in IE
+    position: relative;
+  }
+}

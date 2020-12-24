@@ -1,0 +1,112 @@
+@import "../../../styles/sass/variables-import.scss";
+
+.ontario-callout {
+  font-family: $ontario-font-open-sans;
+  display: block;
+  width: auto;
+  flex-wrap: nowrap;
+  border-width: 0 0 0 4px;
+  border-style: solid;
+
+  &:not(.custom-padding) {
+    padding: $spacing-5;
+  }
+
+  .ontario-callout-column-holder {
+    display: flex;
+
+    &.ontario-align-center {
+      align-items: center;
+    }
+
+    h4 {
+      margin: 0;
+    }
+
+    p {
+      margin-bottom: $spacing-4;
+    }
+
+    & > p:last-child {
+      // The last p tag in the holder should not have spacing since another container already has spacing
+      margin-bottom: $spacing-0;
+    }
+
+    ul:not(.no-bullet) {
+      list-style-type: initial;
+      padding-left: 1.2em; // Change the padding since (1) default browser is too much and (2) theme overrides and sets to 0
+    }
+
+    ul li {
+      margin-bottom: $spacing-3;
+    }
+
+    & > ul {
+      margin-bottom: 0;
+
+      li:last-child {
+        // The last li tag in the holder should not have spacing since another container already has spacing
+        margin-bottom: $spacing-0;
+      }
+    }
+
+    & > .ontario-callout-icon > .ontario-icon {
+      margin-bottom: $spacing-0;
+    }
+  }
+
+  .ontario-callout-icon.ontario-large-display {
+    display: none;
+    @media #{$large-up} {
+      & {
+        display: inherit;
+      }
+    }
+  }
+
+  .ontario-callout-icon.ontario-large-hide {
+    @media #{$large-up} {
+      & {
+        display: none;
+      }
+    }
+  }
+
+  &.ontario-callout-informational-lead {
+    border-color: $ontario-colour-dark-sky;
+    .ontario-callout-icon svg {
+      fill: $ontario-colour-dark-sky;
+    }
+  }
+
+  &.ontario-callout-success {
+    border-color: $ontario-colour-success;
+    background-color: $ontario-colour-lighter-green;
+  }
+
+  &.ontario-callout-warning {
+    border-color: #ffd440; /* This color is not yet in the design system variables */
+    background-color: $ontario-colour-lighter-yellow;
+  }
+
+  &.ontario-callout-alert {
+    border-color: $ontario-colour-alert;
+    background-color: $ontario-colour-lighter-red;
+  }
+
+  &.ontario-callout-informational {
+    border-color: $ontario-colour-dark-sky;
+    background-color: #e2f0f4; /* This color is not yet in the design system variables */
+  }
+
+  .ontario-callout-icon {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 0.9375rem;
+
+    &.hidden {
+      visibility: hidden;
+      height: 1px;
+    }
+  }
+}

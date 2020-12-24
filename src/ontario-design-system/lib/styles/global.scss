@@ -1,0 +1,69 @@
+$font-dir: "/fonts" !default;
+
+@import "../../ds/styles/sass/global/elements.global.scss";
+@import "../../ds/styles/components/fonts/fonts.scss";
+@import "../../ds/styles/components/spacing/spacing.scss";
+@import "../../ds/styles/components/colours/colours.scss";
+//@import "../../ds/styles/components/icons-primary/icons-primary.scss"; // ADD once this file is fixed
+@import "../../ds/styles/components/12col-grid/12col-grid.scss";
+
+/* Some shared styles */
+
+/* REMOVE once the icons primary file is fixed and imported */
+.ontario-icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+    /* The default vertical-align is `baseline`, which leaves a few pixels of space below the icon. Using `center` prevents this. For icons shown alongside text, you may want to use a more precise value, e.g. `vertical-align: -4px` or `vertical-align: -0.15em`. */
+    vertical-align: middle;
+    /* Paths and strokes that overflow the viewBox can show in IE11. */
+    overflow: hidden;
+    margin-bottom: 2px;
+}
+
+/* A custom screen reader only class until the design system contains one */
+.sr-only {
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute !important;
+    width: 1px;
+}
+
+.flex {
+    display: flex;
+
+    &.column {
+        flex-direction: column;
+    }
+
+    &.align-center {
+        align-items: center;
+    }
+
+    &.align-end {
+        align-items: flex-end;
+    }
+
+    &.lt-large-column-reverse {
+        flex-direction: column-reverse;
+    }
+    @media #{$large-up} {
+        &.large-row {
+            flex-direction: row;
+        }
+        &.lt-large-column-reverse {
+            flex-direction: column;
+        }
+    }
+
+    .flex-resize {
+        flex: 1 1 auto;
+    }
+    .flex-no-resize {
+        flex: 0 0 auto;
+    }
+}

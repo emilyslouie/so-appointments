@@ -1,0 +1,534 @@
+@import "../../../styles/sass/variables-import.scss";
+
+/*
+ * Note: The goal of this header is to reflect the current ontario.ca header as closely as possible. For this reason, much of the CSS is copied from the original style sheets.
+ * This header does not contain the search box.
+ */
+
+header {
+  
+  .large-show {
+    display: none;
+    @media #{$large-up} {
+      display: inherit;
+    }
+  }
+
+  a.logo-link {
+    display: block;
+  }
+
+  .large-hide {
+    @media #{$large-up} {
+      display: none;
+    }
+  }
+
+  background-color: $ontario-colour-black;
+  padding-top: $spacing-4;
+  padding-bottom: $spacing-4;
+
+  // a:focus { // Removed for SO locations page
+  //     box-shadow: inherit;
+  //     outline: inherit;
+  //     transition: inherit;
+  // }
+
+  .ontario-row {
+    display: flex;
+    align-items: center;
+  }
+
+  img.site-logo {
+    display: block;
+    width: 112px;
+
+    @media #{$large-up} {
+      & {
+        width: 153px;
+      }
+    }
+  }
+
+  .header-button {
+    align-items: flex-start;
+    background-color: rgb(0, 102, 204);
+    border-bottom-color: rgb(255, 255, 255);
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom-style: none;
+    border-bottom-width: 0px;
+    border-image-outset: 0px;
+    border-image-repeat: stretch;
+    border-image-slice: 100%;
+    border-image-source: none;
+    border-image-width: 1;
+    border-left-color: rgb(255, 255, 255);
+    border-left-style: none;
+    border-left-width: 0px;
+    border-right-color: rgb(255, 255, 255);
+    border-right-style: none;
+    border-right-width: 0px;
+    border-top-color: rgb(255, 255, 255);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-top-style: none;
+    border-top-width: 0px;
+    box-shadow: none;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-stretch: 100%;
+    font-style: normal;
+    font-variant-caps: normal;
+    font-variant-east-asian: normal;
+    font-variant-ligatures: normal;
+    font-variant-numeric: normal;
+    font-weight: 400;
+    height: 38.4px;
+    letter-spacing: normal;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    outline-color: rgb(255, 137, 0);
+    overflow-x: visible;
+    overflow-y: visible;
+    padding-bottom: 3.2px;
+    padding-left: 11.2px;
+    padding-right: 11.2px;
+    padding-top: 3.2px;
+    position: relative;
+    text-align: center;
+    text-decoration-color: rgb(255, 255, 255);
+    text-decoration-line: none;
+    text-decoration-style: solid;
+    text-indent: 0px;
+    text-rendering: auto;
+    text-shadow: none;
+    text-size-adjust: 100%;
+    text-transform: uppercase;
+    transition-delay: 0s;
+    transition-duration: 0.3s;
+    transition-property: background-color;
+    transition-timing-function: ease-out;
+  }
+
+  @media #{$large-up} {
+    .header-button--menu {
+      padding: 0.2rem 0.7rem;
+      margin: 0;
+    }
+  }
+
+  .header-button {
+    font-family: $ontario-font-open-sans;
+    cursor: pointer;
+    font-size: 1rem;
+    text-transform: uppercase;
+
+    .ontario-icon {
+      display: none;
+      margin-right: $spacing-1;
+      margin-bottom: $spacing-0;
+      width: 22.5px;
+      height: 22.5px;
+
+      @media #{$large-up} {
+        & {
+          display: inherit;
+        }
+      }
+
+      & > use {
+        fill: white;
+      }
+    }
+  }
+
+  a.language-link {
+    text-decoration: none;
+    margin-right: 0.75rem;
+
+    @media #{$large-up} {
+      & {
+        margin-right: 1.25rem;
+      }
+    }
+
+    abbr {
+      text-decoration: none;
+      border-bottom: 2px dotted #999;
+    }
+  }
+
+  a.language-link,
+  a.language-link:hover,
+  a.language-link:visited {
+    color: $ontario-colour-white;
+  }
+
+  a.language-link:hover {
+    text-decoration: underline;
+  }
+}
+
+.site-logo-print {
+  display: none;
+  height: 45px;
+}
+
+// Print mode
+@media print {
+  header {
+    background-color: transparent;
+
+    .ontario-columns:not(.print-show) {
+      display: none;
+    }
+
+    img.site-logo {
+      display: none;
+    }
+  }
+  .site-logo-print {
+    display: inherit;
+  }
+}
+
+// Dropdown
+.inline-block {
+  display: inline-block;
+}
+
+.f-dropdown {
+  display: none;
+  left: -9999px;
+  list-style: none;
+  margin-left: 0;
+  position: absolute;
+  background: #ffffff;
+  border: solid 1px #cccccc;
+  font-size: 0.875rem;
+  height: auto;
+  max-height: none;
+  width: 100%;
+  z-index: 89;
+  margin-top: 2px;
+  max-width: 300px;
+}
+.f-dropdown.open {
+  display: block;
+}
+.f-dropdown > *:first-child {
+  margin-top: 0;
+}
+.f-dropdown > *:last-child {
+  margin-bottom: 0;
+}
+.f-dropdown:before {
+  border: inset 6px;
+  content: "";
+  display: block;
+  height: 0;
+  width: 0;
+  border-color: transparent transparent #ffffff transparent;
+  border-bottom-style: solid;
+  position: absolute;
+  top: -12px;
+  left: 10px;
+  z-index: 89;
+}
+.f-dropdown:after {
+  border: inset 7px;
+  content: "";
+  display: block;
+  height: 0;
+  width: 0;
+  border-color: transparent transparent #cccccc transparent;
+  border-bottom-style: solid;
+  position: absolute;
+  top: -14px;
+  left: 9px;
+  z-index: 88;
+}
+.f-dropdown.right:before {
+  left: auto;
+  right: 10px;
+}
+.f-dropdown.right:after {
+  left: auto;
+  right: 9px;
+}
+.f-dropdown.drop-right {
+  display: none;
+  left: -9999px;
+  list-style: none;
+  margin-left: 0;
+  position: absolute;
+  background: #ffffff;
+  border: solid 1px #cccccc;
+  font-size: 0.875rem;
+  height: auto;
+  max-height: none;
+  width: 100%;
+  z-index: 89;
+  margin-top: 0;
+  margin-left: 2px;
+  max-width: 300px;
+}
+.f-dropdown.drop-right.open {
+  display: block;
+}
+.f-dropdown.drop-right > *:first-child {
+  margin-top: 0;
+}
+.f-dropdown.drop-right > *:last-child {
+  margin-bottom: 0;
+}
+.f-dropdown.drop-right:before {
+  border: inset 6px;
+  content: "";
+  display: block;
+  height: 0;
+  width: 0;
+  border-color: transparent #ffffff transparent transparent;
+  border-right-style: solid;
+  position: absolute;
+  top: 10px;
+  left: -12px;
+  z-index: 89;
+}
+.f-dropdown.drop-right:after {
+  border: inset 7px;
+  content: "";
+  display: block;
+  height: 0;
+  width: 0;
+  border-color: transparent #cccccc transparent transparent;
+  border-right-style: solid;
+  position: absolute;
+  top: 9px;
+  left: -14px;
+  z-index: 88;
+}
+.f-dropdown.drop-left {
+  display: none;
+  left: -9999px;
+  list-style: none;
+  margin-left: 0;
+  position: absolute;
+  background: #ffffff;
+  border: solid 1px #cccccc;
+  font-size: 0.875rem;
+  height: auto;
+  max-height: none;
+  width: 100%;
+  z-index: 89;
+  margin-top: 0;
+  margin-left: -2px;
+  max-width: 300px;
+}
+.f-dropdown.drop-left.open {
+  display: block;
+}
+.f-dropdown.drop-left > *:first-child {
+  margin-top: 0;
+}
+.f-dropdown.drop-left > *:last-child {
+  margin-bottom: 0;
+}
+.f-dropdown.drop-left:before {
+  border: inset 6px;
+  content: "";
+  display: block;
+  height: 0;
+  width: 0;
+  border-color: transparent transparent transparent #ffffff;
+  border-left-style: solid;
+  position: absolute;
+  top: 10px;
+  right: -12px;
+  left: auto;
+  z-index: 89;
+}
+.f-dropdown.drop-left:after {
+  border: inset 7px;
+  content: "";
+  display: block;
+  height: 0;
+  width: 0;
+  border-color: transparent transparent transparent #cccccc;
+  border-left-style: solid;
+  position: absolute;
+  top: 9px;
+  right: -14px;
+  left: auto;
+  z-index: 88;
+}
+.f-dropdown.drop-top {
+  display: none;
+  left: -9999px;
+  list-style: none;
+  margin-left: 0;
+  position: absolute;
+  background: #ffffff;
+  border: solid 1px #cccccc;
+  font-size: 0.875rem;
+  height: auto;
+  max-height: none;
+  width: 100%;
+  z-index: 89;
+  margin-left: 0;
+  margin-top: -2px;
+  max-width: 300px;
+}
+.f-dropdown.drop-top.open {
+  display: block;
+}
+.f-dropdown.drop-top > *:first-child {
+  margin-top: 0;
+}
+.f-dropdown.drop-top > *:last-child {
+  margin-bottom: 0;
+}
+.f-dropdown.drop-top:before {
+  border: inset 6px;
+  content: "";
+  display: block;
+  height: 0;
+  width: 0;
+  border-color: #ffffff transparent transparent transparent;
+  border-top-style: solid;
+  bottom: -12px;
+  position: absolute;
+  top: auto;
+  left: 10px;
+  right: auto;
+  z-index: 89;
+}
+.f-dropdown.drop-top:after {
+  border: inset 7px;
+  content: "";
+  display: block;
+  height: 0;
+  width: 0;
+  border-color: #cccccc transparent transparent transparent;
+  border-top-style: solid;
+  bottom: -14px;
+  position: absolute;
+  top: auto;
+  left: 9px;
+  right: auto;
+  z-index: 88;
+}
+.f-dropdown li {
+  cursor: pointer;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  margin: 0;
+}
+.f-dropdown li:hover,
+.f-dropdown li:focus {
+  background: #fff;
+}
+.f-dropdown li a {
+  display: block;
+  padding: 0.5rem;
+  color: #555555;
+}
+.f-dropdown.content {
+  display: none;
+  left: -9999px;
+  list-style: none;
+  margin-left: 0;
+  position: absolute;
+  background: #ffffff;
+  border: solid 1px #cccccc;
+  font-size: 0.875rem;
+  height: auto;
+  max-height: none;
+  padding: 1.25rem;
+  width: 100%;
+  z-index: 89;
+  max-width: 300px;
+}
+.f-dropdown.content.open {
+  display: block;
+}
+.f-dropdown.content > *:first-child {
+  margin-top: 0;
+}
+.f-dropdown.content > *:last-child {
+  margin-bottom: 0;
+}
+.f-dropdown.radius {
+  border-radius: 3px;
+}
+.f-dropdown.tiny {
+  max-width: 200px;
+}
+.f-dropdown.small {
+  max-width: 300px;
+}
+.f-dropdown.medium {
+  max-width: 500px;
+}
+.f-dropdown.large {
+  max-width: 800px;
+}
+.f-dropdown.mega {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+.f-dropdown.mega.open {
+  left: 0 !important;
+}
+
+.f-dropdown {
+  box-shadow: 0 1px 3px #666666;
+  padding: 1rem 0.5rem;
+}
+
+.f-dropdown.content {
+  z-index: 999999;
+}
+
+.f-dropdown a,
+.f-dropdown li a {
+  color: #0066cc;
+  text-decoration: none; // Text decoration added for locations pages
+
+  &:hover {
+    // Hover text decoration added for locations pages
+    text-decoration: underline;
+  }
+}
+
+#drop-menu.f-dropdown.open::before,
+#drop-menu.f-dropdown.open::after {
+  left: auto;
+  right: 31px;
+}
+#drop-menu ul,
+#drop-menu ol {
+  list-style: none;
+}
+.top-margin {
+  margin-top: calc(1rem + 2px) !important;
+}
+.text-right {
+  text-align: right !important;
+}
+
+@media only screen {
+  .show-for-medium-up {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 40.0625em) {
+  .show-for-medium-up {
+    display: inherit !important;
+  }
+}

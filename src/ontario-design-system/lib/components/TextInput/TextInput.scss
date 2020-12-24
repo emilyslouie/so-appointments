@@ -1,0 +1,13 @@
+.ontario-TextInput {
+  max-width: 46em;
+  &-error {
+    border-left: 4px solid #a1141a;
+    padding-left: 1.5em;
+    margin-bottom: 1em;
+  }
+  &-errorText {
+    color: #a1141a;
+    font-weight: 600;
+    margin-bottom: 1em;
+  }
+}

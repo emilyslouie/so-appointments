@@ -1,0 +1,42 @@
+@import "../../../styles/sass/variables-import.scss";
+
+@mixin inheritMargin {
+  margin-left: inherit;
+  margin-right: inherit;
+}
+
+.ontario-grid-spacing-escape {
+  /* Cover the paddings caused by the grid system, giving the accordion a "full-width" apppearance */
+  margin-left: calc(2rem / 2 * -1);
+  margin-right: calc(2rem / 2 * -1);
+
+  @media #{$small-up} {
+    &.lt-small {
+      @include inheritMargin;
+    }
+  }
+
+  @media #{$medium-up} {
+    &.lt-medium {
+      @include inheritMargin;
+    }
+  }
+
+  @media #{$large-up} {
+    &.lt-large {
+      @include inheritMargin;
+    }
+  }
+
+  @media #{$xlarge-up} {
+    &.lt-xlarge {
+      @include inheritMargin;
+    }
+  }
+
+  @media #{$xxlarge-up} {
+    &.lt-xxlarge {
+      @include inheritMargin;
+    }
+  }
+}

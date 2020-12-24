@@ -1,0 +1,25 @@
+@import "../../../styles/sass/variables-import.scss";
+
+/* Breadcrumbs */
+.ontario-breadcrumbs {
+  display: block;
+  margin: 0 0 1.25rem 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+}
+
+.ontario-breadcrumbs li {
+  display: inline;
+  font-size: 0.9rem;
+  line-height: inherit;
+}
+
+.ontario-breadcrumbs li a {
+  text-decoration: underline;
+}
+
+.ontario-breadcrumbs > *:first-child:before {
+  width: 0;
+  margin: 0;
+}

@@ -1,0 +1,20 @@
+@import "src/styles/global";
+
+.ontario-PaymentForm {
+  max-width: 46em;
+  &-cardInfo {
+    margin-left: 1em;
+    &-dateContainer {
+      max-width: 46em;
+      display: flex;
+      justify-content: space-between;
+      &-left {
+        display: flex;
+      }
+    }
+  }
+  &-buttonContainer {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

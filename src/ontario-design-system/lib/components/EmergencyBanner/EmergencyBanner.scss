@@ -1,0 +1,53 @@
+@import "../../../styles/sass/variables-import.scss";
+
+/* Many of these attributes are taken from the existing Ontario.ca emergency banner for consistency */
+.ontario-emergency-banner {
+  min-height: 4.25rem;
+  padding-top: 0.8125rem;
+  box-sizing: border-box;
+
+  background-color: #ffd440;
+
+  p {
+    margin: 0;
+    padding-bottom: 1.25rem;
+    letter-spacing: 0.00625rem;
+    text-rendering: optimizeLegibility;
+
+    a {
+      font-weight: 700;
+      text-decoration: underline;
+      color: inherit;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .ontario-icon.ontario-emergency-banner-icon {
+    width: 32px;
+    height: 32px;
+    margin-bottom: $spacing-0;
+    vertical-align: sub;
+    margin-right: 13.5px;
+    transition: none;
+  }
+
+  /* Styles to reflect the "original" ontario.ca grid (not the new one) */
+  .ontario-original-row {
+    margin: 0 auto;
+    max-width: 62.5rem;
+    width: 100%;
+  }
+
+  .ontario-original-columns {
+    position: relative;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+  }
+
+  .ontario-original-small-12 {
+    width: 100%;
+  }
+}

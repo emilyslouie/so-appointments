@@ -1,0 +1,283 @@
+table {
+    padding-top: 0.75rem;
+}
+
+a {
+    cursor: pointer;
+    font-family: "Open Sans";
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.container {
+    font-family: "Open Sans";
+    overflow-x: hidden;
+    min-height: calc(84vh - 2.5em);
+}
+
+.ontario-link {
+    text-decoration: none;
+    display: inline-block;
+    font-family: "Open Sans";
+}
+
+.ontario-link2 {
+    text-decoration: none;
+    font-family: "Open Sans";
+}
+
+.ontario-link2:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.ontario-link:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.pseudolink {
+    color: #0066cc;
+    font-family: "Open Sans";
+}
+
+.iconlink {
+    transform: scale(1.2) translateY(-2px);
+}
+
+.iconlink2 {
+    transform: scale(0.8) translateY(-2px);
+}
+
+.ontario-header-link {
+    text-decoration: none;
+    display: inline-block;
+    font-family: "Raleway";
+}
+
+.ontario-header-link:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.banner {
+    border-left: 4px solid #3193cc;
+    background-color: #e2f0f4;
+    padding: 1rem;
+    font-family: "Open Sans";
+}
+
+.banner2 {
+    border-left: 4px solid #DCDCDC;
+    background-color: #F5F5F5;
+    padding: 1rem;
+    font-family: "Open Sans";
+}
+
+.banner3 {
+    border-left: 4px solid #FED350;
+    background-color: #FEF6DD;
+    padding: 1rem;
+    font-family: "Open Sans";
+}
+
+.hours {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.hours td,
+.hours th {
+    padding: 0.5rem;
+    text-align: left;
+}
+
+.hours tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+ol {
+    padding-inline-start: 24px;
+}
+
+ol li {
+    padding-left: 4px;
+    padding-bottom: 4px;
+}
+
+ol li a {
+    text-decoration: none;
+
+}
+
+ul {
+    padding-inline-start: 24px;
+
+}
+
+ul li {
+    padding-bottom: 4px;
+    font-family: "Open Sans";
+}
+
+.accordion-content {
+    padding: 16px;
+}
+
+.accordion-content a {
+    text-decoration: none;
+    padding-right: 32px;
+    cursor: pointer;
+}
+
+.ah {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width: 1170px) {
+    .banner {
+        max-width: 100vw;
+    }
+
+
+
+}
+
+@media only screen and (max-width: 1165px) {
+    .ah {
+        display: inherit;
+        justify-content: none;
+    }
+}
+
+
+.counter-button:focus,
+.counter-button:active {
+    box-shadow: 0 0 0 4px #009adb;
+    outline: 4px solid transparent;
+    -webkit-transition: box-shadow .1s ease-in-out;
+    transition: box-shadow .1s ease-in-out
+}
+
+.counter-button {
+    border: none;
+    /* border-radius: 4px; */
+    box-sizing: border-box;
+    box-shadow: none;
+    display: inline-block;
+    font-size: 1.125rem;
+    font-weight: 600;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: calc(14/9);
+    /* margin: 0 calc(1rem + 0.75rem) 1.5rem 0; */
+    /* min-width: 10rem; */
+    width: 3rem;
+    /* padding: calc((1rem + 0.25rem) / 2) 1.5rem; */
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* @media screen and (max-width: 40em) {
+    .counter-button {
+        margin-right: 0;
+        display: block;
+        width: 100%
+    }
+} */
+
+.counter-button .ontario-icon {
+    margin-right: 4px;
+}
+
+
+.counter-button {
+    background-color: #fff;
+    border: 2px solid #1a1a1a;
+    color: #1a1a1a;
+    padding-top: .5rem;
+    padding-bottom: .5rem
+}
+
+.counter-button:hover {
+    background-color: #e0f0ff;
+    border-color: #00478f;
+    color: #00478f
+}
+
+.counter-button:focus {
+    background-color: #e0f0ff;
+    border-color: #00478f;
+    color: #00478f;
+    -webkit-transition: background-color .2s ease-out, box-shadow .1s ease-in-out;
+    transition: background-color .2s ease-out, box-shadow .1s ease-in-out
+}
+
+.counter-button:active {
+    background-color: #c2e0ff;
+    border-color: #002142;
+    color: #002142;
+    -webkit-transition: background-color 0s, box-shadow .1s ease-in-out;
+    transition: background-color 0s, box-shadow .1s ease-in-out
+}
+
+.counter-button:visited {
+    color: #06c
+}
+
+.counter-input:focus,
+.counter-input:active {
+    box-shadow: 0 0 0 4px #009adb;
+    outline: 4px solid transparent;
+    -webkit-transition: box-shadow .1s ease-in-out;
+    transition: box-shadow .1s ease-in-out
+}
+
+.counter-input {
+    border: 2px solid #1a1a1a;
+    /* border-radius: 4px; */
+    z-index: -1;
+    box-sizing: border-box;
+    color: #1a1a1a;
+    display: inline-block;
+    font-size: 1rem;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    margin: 0 0 2.5rem;
+    max-width: 46em;
+    width: 100%;
+    padding: .7rem 1rem 0.55rem;
+    -webkit-transition: box-shadow .1s ease-in-out;
+    transition: box-shadow .1s ease-in-out
+}
+
+.left {
+    border-radius: 4px 0px 0px 4px;
+    z-index: 4;
+}
+
+.right {
+    border-radius: 0px 4px 4px 0px;
+    z-index: 2;
+}
+
+.counter-input--2-char-width {
+    max-width: 8ex
+}
+
+.bar {
+    max-width: 100%;
+    margin-bottom: 24px;
+    text-align: center;
+    /* margin: auto; */
+}

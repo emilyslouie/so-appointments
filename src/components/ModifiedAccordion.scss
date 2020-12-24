@@ -1,0 +1,120 @@
+@import "../ontario-design-system/styles/sass/variables-import.scss";
+
+.modified-ontario-accordion {
+
+  /* Cover the paddings caused by the grid system, giving the accordion a "full-width" apppearance */
+  &.modified-full-width-lt-large {
+    // margin-left: calc(2rem / 2 * -1);
+    margin-right: calc(2rem / 2 * -1);
+
+    @media #{$large-up} {
+      & {
+        // margin-left: inherit;
+        margin-right: inherit;
+      }
+    }
+  }
+
+  .modified-ontario-accordion-wrapper {
+    overflow: hidden;
+    border-bottom: none;
+
+    &:after {
+      content: "";
+      height: 50px;
+      transition: height 0.3s linear, max-height 0s 0.3s linear;
+      max-height: 0px;
+    }
+
+    &.collapsed:after {
+      height: 0;
+      transition: height 0.3s linear;
+      max-height: 50px;
+    }
+
+    &.collapsed>.modified-ontario-accordion-content {
+      // margin-bottom: -2000px;
+      transition: margin-bottom 0.3s cubic-bezier(1, 0, 1, 1),
+        visibility 0s 0.3s, max-height 0s 0.3s;
+      visibility: hidden;
+      max-height: 0;
+    }
+  }
+
+  .modified-ontario-accordion-content {
+    transition: margin-bottom 0.3s cubic-bezier(0, 0, 0, 1);
+    margin-bottom: 0;
+    max-height: 1000000px;
+    width: 100%;
+
+    &.content-full-width-lt-large {
+      // padding-left: calc(2rem / 2);
+      padding-right: calc(2rem / 2);
+
+      @media #{$large-up} {
+        & {
+          // padding-left: inherit;
+          padding-right: inherit;
+        }
+      }
+    }
+  }
+
+  .modified-ontario-accordion-button {
+    width: 100%;
+    font-weight: 550;
+    text-decoration: underline;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background-color: transparent;
+    text-align: left;
+    color: $ontario-colour-link;
+    font-size: 1.05rem;
+    font-family: $ontario-font-raleway-modified;
+    cursor: pointer;
+    // margin-bottom: $spacing-0;
+    box-sizing: border-box;
+
+    @media #{$large-up} {
+      & {
+        padding: 0;
+      }
+    }
+
+    &>span {
+      position: relative; // Prevent shift in IE
+    }
+
+    &:focus {
+      box-shadow: none;
+      outline: none;
+      transition: all 0.1s ease-in-out;
+    }
+
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin-bottom: $spacing-0;
+    }
+
+    .modified-ontario-icon-chevron-down {
+      color: $ontario-colour-black;
+      margin-bottom: $spacing-0;
+      display: block;
+      transform: translateY(4px);
+      -ms-transition: all 0.3s ease-out;
+      transition: all 0.3s ease-out;
+
+      &.rotate {
+        -ms-transform: rotate(180deg);
+        /* IE9+ */
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

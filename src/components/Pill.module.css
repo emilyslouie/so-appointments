@@ -1,0 +1,7 @@
+.pill {
+    background-color: rgb(226, 243, 255);
+    border-radius: 5px;
+    width: fit-content;
+    margin-bottom: 1rem;
+    padding: .75rem;
+}
